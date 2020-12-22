@@ -62,4 +62,4 @@ def main():
 if __name__ == "__main__": 
     main()
 else: 
-    print ("how_to_create_function.py imported")
+    print ("duongdt_how_to_create_function.py imported")

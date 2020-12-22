@@ -1,5 +1,5 @@
 #Ref https://www.programiz.com/python-programming/methods/built-in/abs
-def basic_001_data_types():
+def main():
   x = "Hello World" 	
   print(x, type(x), "\n")
 
@@ -72,3 +72,9 @@ def basic_001_data_types():
 
   x = bytearray(5) 
   print(x, type(x), "\n") 	
+
+
+if __name__ == "__main__": 
+    main()
+else: 
+    print ("duongdt_Basic_001_data_types.py imported")
