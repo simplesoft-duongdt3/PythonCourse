@@ -1,8 +1,6 @@
 import src.advanced_practice.duongdt_how_to_create_function as create_function
 
-<<<<<<< Updated upstream
-create_function.main()
-=======
+
 class Song:
     def __init__(self, name: str, playCount: int):
         self.name = name
@@ -65,5 +63,4 @@ def main():
 main()
 print("sai roi")
 # thu nha
-main()
->>>>>>> Stashed changes
+
