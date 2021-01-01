@@ -34,3 +34,40 @@ print(" convert DateTime ", myDate, " To Text",myFormatText)
 ngay =date(year=2020,month=12,day=28)
 myFormatText1=ngay.strftime("%a %Y/%m/%d")
 print(" convert DateTime ", ngay, " To Text",myFormatText1)
+
+ngay=datetime(year =2020, month=12, day=23, hour =14, minute=30, second = 20, )
+fomarting= ngay.strftime("%a %Y-%m-%d %I %p %S")
+print(fomarting)
+
+a = 3.621211
+b= "hai so {:.2f} ".format(a)
+print(b)
+
+b= "hai so {:.0f} ".format(a)
+print(b)
+d=1
+e= "them so o {:0>3d} ".format(d)
+print(e)
+d=1000000
+e= " {:,} ".format(d)
+print(e)
+d=0.1
+e= " {:.2%} ".format(d)
+print(e)
+
+def bt (listS,start=0):
+    n=start
+    for x in listS:
+        yield n, x
+        n+=1
+
+listItem = ["Sping","summer","Fall","Winter"]
+a=bt(listS= listItem, start=0)
+print(list(a))
+print(a)
+
+for index, item in bt(listItem):
+    print(index, item)
+
+for index, item in enumerate(listItem):
+    print(index, item)
