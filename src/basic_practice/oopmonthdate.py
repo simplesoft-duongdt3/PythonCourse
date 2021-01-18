@@ -16,6 +16,10 @@ print("DateTime",objDateTime)
 
 timestamp=datetime.timestamp(objDateTime)
 print("DAte and Time",objDateTime,"Timestamp",timestamp)
+
+a=objDateTime.timestamp()
+print(a)
+
 dateTimeFromTimeStamp=datetime.fromtimestamp(timestamp)
 print("Timestamp",timestamp,"Date and Time",dateTimeFromTimeStamp)
 
