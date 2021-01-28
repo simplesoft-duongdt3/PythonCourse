@@ -52,6 +52,29 @@ a= GetAlbumAtPage(page=4)
 for album in a :
     print(album)
 
+class Trackslist :
+    def __init__(self,trackid:int,name:str ,albumid: int) -> None:
+        self.trackid=trackid
+        self.name=name
+        self.albumid=albumid
+    def __str__(self)->str:
+        return str(self.trackid)+" " + str(self.name)+ " "+ str(self.albumid)
+
+def GetTrackList ( alid: int ) -> typing.List[Trackslist]: 
+    conn=sqlite3.connect('chinook.db')
+    cursor5 = conn.execute('select * from tracks ')
+    result9 =cursor5.fetchall()
+    list2:typing.List[Trackslist]=[]
+    for tracklisttuple in result9 : 
+        tracklist1:Trackslist=Trackslist(trackid=tracklisttuple[0],name=tracklisttuple[1],albumid=tracklisttuple[2] )
+        list2.append(tracklist1)
+    return list2
+
+
+
+
+    
+
 
 
 
