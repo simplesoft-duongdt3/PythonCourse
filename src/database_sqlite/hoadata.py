@@ -60,18 +60,50 @@ class Trackslist :
     def __str__(self)->str:
         return str(self.trackid)+" " + str(self.name)+ " "+ str(self.albumid)
 
-def GetTrackList ( alid: int ) -> typing.List[Trackslist]: 
-    conn=sqlite3.connect('chinook.db')
-    cursor5 = conn.execute('select * from tracks ')
-    result9 =cursor5.fetchall()
+def GetTrackList ( albumid: int ) -> typing.List[Trackslist]: 
+    conn : sqlite3.Connection =sqlite3.connect('chinook.db')
+    cursor5: sqlite3.Cursor = conn.execute(str.format('SELECT trac.trackid,trac.name,trac.albumid from tracks as trac where albumid={albumid}', albumid=albumid))
+    listTuple: typing.List[typing.Tuple] =cursor5.fetchall()
     list2:typing.List[Trackslist]=[]
-    for tracklisttuple in result9 : 
-        tracklist1:Trackslist=Trackslist(trackid=tracklisttuple[0],name=tracklisttuple[1],albumid=tracklisttuple[2] )
-        list2.append(tracklist1)
+
+    for trackTuple in listTuple: 
+        tracklist1:Trackslist=Trackslist(trackid=trackTuple[0],name=trackTuple[1],albumid=trackTuple[2] )
+        list2.append(tracklist1) 
     return list2
+print("hoa")
+b=GetTrackList( albumid=12 )
+for tracklist in b :
+    print (tracklist)
 
 
 
+
+class ArtisId :
+    def __init__(self, name:str, artid: int) -> None:
+        self.name =name
+        self.artid=artid
+    def __str__(self)->str:
+        return str(self.name)+" " + str(self.artid)
+
+def GetArtist ( albumid: int ) -> typing.Optional[ArtisId]: 
+    conn: sqlite3.Connection=sqlite3.connect('chinook.db')
+    cursor5: sqlite3.Cursor = conn.execute(str.format("""SELECT ar.Name, al.ArtistId
+FROM albums as al
+INNER JOIN artists AS ar
+ON ar.artistid =al.ArtistId
+where al.AlbumId={albumid}""", albumid=albumid))
+
+    artistTuple: typing.Optional[typing.Tuple] =cursor5.fetchone()
+    if(artistTuple == None):
+       return None 
+    else:
+        artistid= ArtisId( name=artistTuple[0], artid=artistTuple[1])
+        return artistid
+
+print("artist")
+a= GetArtist( albumid=9999 )
+
+print(a)
 
     
 
