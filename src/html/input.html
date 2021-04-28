@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        th,
+        td {
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h2>Student registration form </h2>
+    <form action="/action_page.php" method="get">
+
+        <table>
+
+            <tr>
+                <td> <label for="fname">Name:</label> </td>
+                <td> <input type="text" id="fname" name="fname" autofocus /> </td>
+
+            </tr>
+
+
+            <tr>
+                <td> <label for="fathername">Father Name:</label> </td>
+                <td> <input type="text" id="fname" name="fathername"></td>
+
+            </tr>
+
+
+            <tr>
+                <td> <label for="postalname">Postal Address:</label> </td>
+                <td> <input type="text" id="fname" name="postalname"></td>
+
+            </tr>
+
+            <tr>
+                <td> <label for="personalname">Personal Address:</label> </td>
+                <td> <input type="text" id="fname" name="personalname"> </td>
+
+            </tr>
+
+            <tr>
+                <td> <label>sex:</label> </td>
+                <td> <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td> <label for="city">City:</label> </td>
+                <td> <select id="cars" name="city">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+
+                    </select> </td>
+
+            </tr>
+
+            <tr>
+                <td> <label for="course">Course:</label> </td>
+                <td> <select id="cars" name="course">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select> </td>
+
+            </tr>
+
+
+            <tr>
+                <td> <label for="district">District:</label> </td>
+                <td>
+                    <select id="cars" name="district">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td> <input type="submit" value="Submit"> <input type="reset" value="Reset"> </td>
+                <td>
+                </td>
+
+            </tr>
+
+        </table>
+
+
+    </form>
+
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+
+
+
+</body>
+
+</html>

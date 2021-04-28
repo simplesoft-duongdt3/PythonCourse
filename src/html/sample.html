@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container">
+        <div class="d-flex justify-content-between">
+
+            <div class="btn-group">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-outline-light text-dark dropdown-toggle"
+                        data-toggle="dropdown">
+                        Columns
+
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+
+                <div class="dropdown">
+                    <button type="button" class="btn btn-outline-light text-dark dropdown-toggle"
+                        data-toggle="dropdown">
+                        Export
+
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-outline-secondary">Clear filter</button>
+
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <input type="text" class="form-control col-6" id="usr" name="username">
+            <div class="col-6 d-flex justify-content-end align-items-center"> Showing
+                <select class="form-control col-3" id="sel1" name="sellist1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                Entries
+            </div>
+        </div>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>!#</th>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Market cap</th>
+                <th>Price</th>
+                <th>%24h</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td> <img src="https://cdn.iconscout.com/icon/free/png-256/bitcoin-1824299-1545921.png"
+                        width=" 25px">Bitcoin</td>
+                <td> BTC</td>
+                <td class="bg-success">$5,147,483,647</td>
+                <td>$5,147,483,647</td>
+                <td>-9.3%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td> <img
+                        src="https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/ripple_xrp_coin-512.png"
+                        width=" 25px"> XRP</td>
+                <td>BTC</td>
+                <td>$5,147,483,647</td>
+                <td>$5,147,483,647</td>
+                <td>-9.3%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td> <img
+                        src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Ethereum-ETH-icon.png"
+                        width=" 25px"> Ethereum</td>
+                <td>ETH</td>
+                <td>$5,147,483,647</td>
+                <td>$5,147,483,647</td>
+                <td>-9.3%</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td> <img
+                        src="data:image/png;base64,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"
+                        width=" 25px">Bitcoin Cash</td>
+                <td>BHC</td>
+                <td>$5,147,483,647</td>
+                <td>$5,147,483,647</td>
+                <td>-9.3%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td> <img
+                        src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Ethereum-ETH-icon.png"
+                        width=" 25px">Stellar</td>
+                <td>XLM</td>
+                <td>$5,147,483,647</td>
+                <td>$5,147,483,647</td>
+                <td>-9.3%</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-between"> showing 1 to 5 of 20 entries 
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+</div>
+    </div>
+
+</body>
+
+</html>
